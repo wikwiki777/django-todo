@@ -2,3 +2,5 @@
 .coverage
 /include
 /lib
+/__pycache__
+/django_todo/__pycache__

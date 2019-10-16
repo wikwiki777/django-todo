@@ -1,0 +1,11 @@
+coverage==4.5.4
+Django==2.2.6
+entrypoints==0.3
+flake8==3.7.8
+gunicorn==19.9.0
+mccabe==0.6.1
+psycopg2==2.8.3
+pycodestyle==2.5.0
+pyflakes==2.1.1
+pytz==2019.3
+sqlparse==0.3.0

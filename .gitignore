@@ -4,3 +4,5 @@
 /lib
 /__pycache__
 /django_todo/__pycache__
+/django_todo/__pycache__/settings.cpython-37.pyc
+/django_todo/.env

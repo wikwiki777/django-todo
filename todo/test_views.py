@@ -28,7 +28,7 @@ class TestViews(TestCase):
         self.assertEqual(page.status_code, 404)
 
     def test_post_create_an_item(self):
-        response = self.client.post("/add", {"name": "Create a Test"})
+        self.client.post("/add", {"name": "Create a Test"})
         item = get_object_or_404(Item, pk=1)
         self.assertEqual(item.done, False)
 
@@ -37,7 +37,7 @@ class TestViews(TestCase):
         item.save()
         id = item.id
 
-        response = self.client.post("/edit/{0}".format(id), {"name": "A different name"})
+        self.client.post("/edit/{0}".format(id), {"name": "A different name"})
         item = get_object_or_404(Item, pk=id)
         self.assertEqual("A different name", item.name)
 
@@ -46,7 +46,7 @@ class TestViews(TestCase):
         item.save()
         id = item.id
 
-        response = self.client.post("/toggle/{0}".format(id))
+        self.client.post("/toggle/{0}".format(id))
         item = get_object_or_404(Item, pk=id)
         self.assertTrue(item.done)
 
